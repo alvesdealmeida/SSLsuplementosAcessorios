@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Cliente:
+  = @mensagem.Cliente
+%p
+  %b Email:
+  = @mensagem.email
+%p
+  %b Assunto:
+  = @mensagem.assunto
+%p
+  %b Conteudo:
+  = @mensagem.conteudo
+
+= link_to 'Edit', edit_mensagem_path(@mensagem)
+\|
+= link_to 'Back', mensagens_path
