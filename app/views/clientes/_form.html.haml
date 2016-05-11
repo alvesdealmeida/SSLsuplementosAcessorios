@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :nome
-    = f.input :endereco
-    = f.input :telefone
-    = f.input :email
+    = f.input :nome, label: "Nome"
+    = f.input :endereco, label: "Endereço"
+    = f.input :telefone, label: "Telefone"
+    = f.input :email, label: "E-mail"
 
   .form-actions
-    = f.button :submit
+    = f.submit "Salvar"

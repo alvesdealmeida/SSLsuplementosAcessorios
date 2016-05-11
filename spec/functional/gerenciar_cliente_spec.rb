@@ -21,10 +21,10 @@ feature 'Gerenciar Cliente' do
 
   def preencher_e_verificar_cliente
 
-    fill_in 'Nome Cliente',     :with => "mario"
+    fill_in 'Nome',     :with => "mario"
     fill_in 'Endereço', :with => "rua peru ,20"
     fill_in 'Telefone',     :with => "22997195721"
-    fill_in 'Email', :with => "contato.sebastiaoalves@gmail.com"
+    fill_in 'E-mail', :with => "contato.sebastiaoalves@gmail.com"
 
     click_button 'Salvar'
 
