@@ -1,0 +1,11 @@
+= simple_form_for(@produto) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label: "Nome"
+    = f.input :categoria, label: "Categoria"
+    = f.input :descricao, label: "Descricao"
+    = f.input :valor, label: "Valor"
+
+  .form-actions
+    = f.submit "Salvar"

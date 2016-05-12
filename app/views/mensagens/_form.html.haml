@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.association :Cliente
-    = f.input :email
-    = f.input :assunto
-    = f.input :conteudo
+    = f.association :Cliente, label: "Nome", label_method: :nome
+    = f.input :email, label: "E-mail"
+    = f.input :assunto, label: "assunto"
+    = f.input :conteudo, conteudo: "conteudo"
 
   .form-actions
-    = f.button :submit
+    = f.submit "Salvar"

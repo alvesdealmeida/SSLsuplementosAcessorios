@@ -14,7 +14,7 @@
   %tbody
     - @mensagens.each do |mensagem|
       %tr
-        %td= mensagem.Cliente
+        %td= mensagem.Cliente.nome
         %td= mensagem.email
         %td= mensagem.assunto
         %td= mensagem.conteudo
