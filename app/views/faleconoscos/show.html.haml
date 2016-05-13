@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Cliente:
+  = @faleconosco.Cliente
+%p
+  %b Email:
+  = @faleconosco.email
+%p
+  %b Assunto:
+  = @faleconosco.assunto
+%p
+  %b Conteudo:
+  = @faleconosco.conteudo
+
+= link_to 'Edit', edit_faleconosco_path(@faleconosco)
+\|
+= link_to 'Back', faleconoscos_path

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512010612) do
+ActiveRecord::Schema.define(version: 20160513001353) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20160512010612) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "faleconoscos", force: :cascade do |t|
+    t.integer  "Cliente_id"
+    t.string   "email"
+    t.string   "assunto"
+    t.text     "conteudo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "faleconoscos", ["Cliente_id"], name: "index_faleconoscos_on_Cliente_id"
 
   create_table "mensagens", force: :cascade do |t|
     t.integer  "Cliente_id"
@@ -32,6 +43,20 @@ ActiveRecord::Schema.define(version: 20160512010612) do
   end
 
   add_index "mensagens", ["Cliente_id"], name: "index_mensagens_on_Cliente_id"
+
+  create_table "pedidos", force: :cascade do |t|
+    t.integer  "Cliente_id"
+    t.integer  "Produto_id"
+    t.string   "quantidade"
+    t.string   "valorunitario"
+    t.string   "valor"
+    t.string   "total"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "pedidos", ["Cliente_id"], name: "index_pedidos_on_Cliente_id"
+  add_index "pedidos", ["Produto_id"], name: "index_pedidos_on_Produto_id"
 
   create_table "produtos", force: :cascade do |t|
     t.string   "nome"

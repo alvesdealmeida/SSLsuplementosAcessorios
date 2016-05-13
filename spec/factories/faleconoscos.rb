@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :mensagem do
+  factory :faleconosco do
     Cliente nil
     email "MyString"
     assunto "MyString"

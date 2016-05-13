@@ -2,7 +2,7 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :nome, label: "Nome"
+    = f.input :nome, label: "Nome", label_method: :nome
     = f.input :endereco, label: "Endereço"
     = f.input :telefone, label: "Telefone"
     = f.input :email, label: "E-mail"

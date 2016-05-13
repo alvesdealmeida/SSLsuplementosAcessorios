@@ -1,0 +1,27 @@
+%h1 Listing faleconoscos
+
+%table
+  %thead
+    %tr
+      %th Cliente
+      %th Email
+      %th Assunto
+      %th Conteudo
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faleconoscos.each do |faleconosco|
+      %tr
+        %td= faleconosco.Cliente.nome
+        %td= faleconosco.email
+        %td= faleconosco.assunto
+        %td= faleconosco.conteudo
+        %td= link_to 'Show', faleconosco
+        %td= link_to 'Edit', edit_faleconosco_path(faleconosco)
+        %td= link_to 'Destroy', faleconosco, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faleconosco', new_faleconosco_path

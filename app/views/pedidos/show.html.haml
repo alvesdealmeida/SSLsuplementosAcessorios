@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %b Cliente:
+  = @pedido.Cliente
+%p
+  %b Produto:
+  = @pedido.Produto
+%p
+  %b Quantidade:
+  = @pedido.quantidade
+%p
+  %b Valorunitario:
+  = @pedido.valorunitario
+  %b Valor:
+  = @pedido.valor
+%p
+  %b Total:
+  = @pedido.total
+
+= link_to 'Edit', edit_pedido_path(@pedido)
+\|
+= link_to 'Back', pedidos_path

@@ -1,0 +1,13 @@
+= simple_form_for(@pedido) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :Cliente, label: "Nome", label_method: :nome
+    = f.association :Produto, label: "Nome Produto", label_method: :nome
+    = f.input :quantidade
+    = f.input :valorunitario, label: "Valorunitario"
+    = f.input :valor
+    = f.input :total
+
+  .form-actions
+    = f.submit "Salvar"
