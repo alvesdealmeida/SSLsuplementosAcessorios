@@ -2,7 +2,7 @@
 
 %p
   %b Cliente:
-  = @faleconosco.Cliente
+  = @faleconosco.Cliente.nome
 %p
   %b Email:
   = @faleconosco.email
@@ -13,6 +13,6 @@
   %b Conteudo:
   = @faleconosco.conteudo
 
-= link_to 'Edit', edit_faleconosco_path(@faleconosco)
+= link_to 'Editar', edit_faleconosco_path(@faleconosco)
 \|
-= link_to 'Back', faleconoscos_path
+= link_to 'Voltar', faleconoscos_path

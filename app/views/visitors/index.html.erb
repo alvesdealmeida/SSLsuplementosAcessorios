@@ -1,1 +1,51 @@
-<h3>Welcome</h3>
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    SSL Suplementos e Acessorios
+                </a>
+            </li>
+            <li>
+                <a href="Cliente">Cadastrar Clientes</a>
+            </li>
+            <li>
+                <a href="Produto">Cadastrar Produtos</a>
+            </li>
+            <li>
+                <a href="Pedido">Cadastrar Pedidos</a>
+            </li>
+            <li>
+                <a href="Faleconosco">Fale Consoco</a>
+            </li>
+            
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <span style="color: rgb(255, 0, 0);"><marquee behavior=scroll><h1>Página em Desenvolvimento !!!!</h1></marquee></span>
+                    <p>Desculpe o transtorno !!!! </p>
+		    <marquee behavior="alternate"><%= image_tag "s.jpg" %></marquee> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
