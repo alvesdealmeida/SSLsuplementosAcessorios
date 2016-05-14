@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
@@ -39,7 +40,7 @@ gem 'ransack', '~> 1.5.1'
 
 group :development, :test do
   gem 'byebug'
-  gem 'sqlite3'
+  gem 'sqlite3', group: [:development,:test]
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
@@ -61,10 +62,9 @@ group :test do
 end
 
 group :production do
-  #gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
 end
-
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
