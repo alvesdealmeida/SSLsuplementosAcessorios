@@ -1,4 +1,4 @@
-%h1 Listing produtos
+%h1 PRODUTOS
 
 %table
   %thead
@@ -18,9 +18,9 @@
         %td= produto.categoria
         %td= produto.descricao
         %td= produto.valor
-        %td= link_to 'Show', produto
-        %td= link_to 'Edit', edit_produto_path(produto)
-        %td= link_to 'Destroy', produto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', produto
+        %td= link_to 'Editar', edit_produto_path(produto)
+        %td= link_to 'Excluir', produto, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

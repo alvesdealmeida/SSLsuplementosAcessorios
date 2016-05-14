@@ -1,4 +1,4 @@
-%h1 Listing faleconoscos
+%h1 FALECONOSCO
 
 %table
   %thead
@@ -18,9 +18,9 @@
         %td= faleconosco.email
         %td= faleconosco.assunto
         %td= faleconosco.conteudo
-        %td= link_to 'Show', faleconosco
-        %td= link_to 'Edit', edit_faleconosco_path(faleconosco)
-        %td= link_to 'Destroy', faleconosco, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', faleconosco
+        %td= link_to 'Editar', edit_faleconosco_path(faleconosco)
+        %td= link_to 'Excluir', faleconosco, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
